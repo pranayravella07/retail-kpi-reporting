@@ -28,6 +28,7 @@ def load_raw(path) -> pd.DataFrame:
     df["invoice_ts"] = pd.to_datetime(df["invoice_ts"])
     df["customer_id"] = df["customer_id"].str.replace(r"\.0$", "", regex=True)  # 12345.0 -> 12345
     df["description"] = df["description"].astype("string").str.strip()
+    df["stock_code"] = df["stock_code"].str.strip().str.upper()  # 15056bl and 15056BL are the same product
     return df
 
 
