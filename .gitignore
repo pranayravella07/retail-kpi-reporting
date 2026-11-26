@@ -1,0 +1,16 @@
+# data and database (too large for GitHub, rebuilt by the pipeline)
+data/
+*.duckdb
+*.duckdb.wal
+
+# Python
+.venv/
+__pycache__/
+*.pyc
+
+# secrets (API keys for the AI step)
+.env
+
+# personal notes, not for GitHub
+SETUP_GUIDE.md
+INTERVIEW_PREP.md
